@@ -118,12 +118,11 @@ function makeScene() {
                 function(object) {
                     object.scale.set(0.7, 0.7, 0.7);
                     object.position.set(250, 0, 40);
-					object.getChcastShadow = true;
-					object.receiveShadow = true;
                     object.rotateY(-0.15 + Math.PI);
 					object.traverse(function(node){
 						if(node.isMesh){
 							node.castShadow = true;
+                            node.receiveShadow = true;
 						}
 					})
 					console.log();
